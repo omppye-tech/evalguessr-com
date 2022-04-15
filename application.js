@@ -40,6 +40,12 @@ const beginPosition = () => {
   document
     .getElementById("chess-board")
     .setAttribute("src", getImageBoard(window.__current_game.fen));
+
+  document.getElementById("turn").innerText = window.__current_game.fen
+    .split(" ")
+    .filter((char) => ["b", "w"].includes(char))
+    .map((char) => (char === "b" ? "Black" : "White"));
+
   return;
 };
 

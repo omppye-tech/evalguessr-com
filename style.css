@@ -39,6 +39,12 @@ button:disabled {
   padding: 16px;
 }
 
+.chess-board-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
 .chess-board-external-border {
   border: 1px solid #52525e;
 }
@@ -53,6 +59,10 @@ button:disabled {
   pointer-events: none;
   touch-action: none;
   width: 100%;
+}
+
+#turn {
+  display: inline-block;
 }
 
 .help-dialog {
