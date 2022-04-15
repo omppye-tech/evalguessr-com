@@ -24,10 +24,14 @@ const getRandomGame = () => {
 
 const getImageBoard = (fen) => {
   if (!fen) {
-    return "http://www.fen-to-image.com/image/64/rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR.png";
+    return "https://corsanywhere.herokuapp.com/http://www.fen-to-image.com/image/64/rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR.png";
   }
 
-  return "http://www.fen-to-image.com/image/64/" + fen + ".png";
+  return (
+    "https://corsanywhere.herokuapp.com/http://www.fen-to-image.com/image/64/" +
+    fen +
+    ".png"
+  );
 };
 
 const beginPosition = () => {
