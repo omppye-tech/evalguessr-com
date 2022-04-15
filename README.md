@@ -1,6 +1,6 @@
 # Evalguessr
 
-Just a little chess game
+Just a little chess game. Try it [here](https://www.evalguessr.com/)!
 
 ## License
 
