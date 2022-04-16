@@ -2,8 +2,9 @@
 
 const slider = document.getElementById("slider");
 const submit = document.getElementById("submit");
-const position = document.getElementById("next-position");
-const container = document.getElementById("answer-container");
+const nextPosition = document.getElementById("next-position");
+const answerHeader = document.getElementById("answer-header");
+const answerAnchor = document.getElementById("answer-anchor");
 const answer = document.getElementById("answer");
 const sliderGuess = document.getElementById("slider-guess");
 
@@ -60,26 +61,31 @@ slider.addEventListener("input", (event) => {
 
 submit.addEventListener("click", (event) => {
   event.preventDefault();
-  document.getElementById("answer").innerText = window.__current_game.score;
+
+  answerAnchor.setAttribute("href", window.__current_game.lichess);
+  answer.innerText = window.__current_game.score;
 
   slider.disabled = true;
   submit.disabled = true;
-  position.disabled = false;
-  position.style.display = "inline-block";
-  container.style.display = "block";
+  nextPosition.disabled = false;
+  nextPosition.style.display = "inline-block";
+  answerHeader.style.display = "block";
 
   return;
 });
 
-position.addEventListener("click", (event) => {
+nextPosition.addEventListener("click", (event) => {
   event.preventDefault();
+
+  answerAnchor.setAttribute("href", "#");
+  answer.innerText = "0.0";
 
   slider.disabled = false;
   slider.value = 0;
   submit.disabled = false;
-  position.disabled = true;
-  position.style.display = "none";
-  container.style.display = "none";
+  nextPosition.disabled = true;
+  nextPosition.style.display = "none";
+  answerHeader.style.display = "none";
   sliderGuess.innerText = 0;
 
   return beginPosition();

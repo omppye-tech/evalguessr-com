@@ -29,7 +29,7 @@
   </head>
   <body>
     <div class="navbar">
-      <div><h1>Evalguessr!</h1></div>
+      <div><h1>Evalguessr</h1></div>
       <div class="spacer"></div>
       <div>
         <a
@@ -58,16 +58,16 @@
             <img alt="Chess board" class="chess-board" id="chess-board" />
           </div>
         </div>
-        <div class="turn-dialog">
+        <div>
           <h3>
             <p id="turn">Black</p>
             to play
           </h3>
         </div>
       </div>
-      <div class="help-dialog">
-        <div class="text">
-          <h2 class="subtitle">Guess the evaluation</h2>
+      <div class="action-container">
+        <div class="article-container">
+          <h2 class="title">Guess the evaluation!</h2>
           <div>
             <p>This is a rated rapid game played on Lichess.</p>
             <p>
@@ -94,13 +94,19 @@
           </button>
         </div>
         <div class="guess-container">
-          <h2 id="answer-container" style="display: none">
-            Answer
-            <p id="answer">?</p>
-          </h2>
+          <a
+            id="answer-anchor"
+            href="#"
+            rel="noopener noreferrer"
+            target="_blank"
+            ><h2 id="answer-header" style="display: none">
+              Answer
+              <p id="answer">?</p>
+            </h2></a
+          >
           <h2>
             Your guess
-            <p id="slider-guess">-0.4</p>
+            <p id="slider-guess">0.0</p>
           </h2>
         </div>
       </div>

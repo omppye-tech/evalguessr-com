@@ -65,16 +65,16 @@ button:disabled {
   display: inline-block;
 }
 
-.help-dialog {
+.action-container {
   display: flex;
   flex-direction: column;
 }
 
-.text {
+.article-container {
   font-size: 1.2rem;
 }
 
-.subtitle {
+.title {
   color: #ed3966;
 }
 
@@ -125,6 +125,11 @@ button:disabled {
 .guess-container {
   display: flex;
   justify-content: space-evenly;
+}
+
+#answer-anchor {
+  color: #fbfbfe;
+  text-decoration: none;
 }
 
 #answer {
